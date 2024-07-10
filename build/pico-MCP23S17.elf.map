@@ -86,8 +86,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
  .data          0x00000000        0x0 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
  .bss           0x00000000        0x0 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
- .text.mcp23s17_read
-                0x00000000       0x3c CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
  .text          0x00000000        0x0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
  .data          0x00000000        0x0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
  .bss           0x00000000        0x0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1348,8 +1346,6 @@ Discarded input sections
                 0x00000000       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
  .text.spi_get_baudrate
                 0x00000000       0x1e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
- .time_critical.spi_write_read_blocking
-                0x00000000       0x42 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
  .time_critical.spi_read_blocking
                 0x00000000       0x3e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
  .time_critical.spi_write16_read16_blocking
@@ -1358,9 +1354,9 @@ Discarded input sections
                 0x00000000       0x3c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
  .time_critical.spi_read16_blocking
                 0x00000000       0x3e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
- .text          0x00000000        0x0 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccNcuQ9h.o
- .data          0x00000000        0x0 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccNcuQ9h.o
- .bss           0x00000000        0x0 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccNcuQ9h.o
+ .text          0x00000000        0x0 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccfeNUHM.o
+ .data          0x00000000        0x0 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccfeNUHM.o
+ .bss           0x00000000        0x0 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccfeNUHM.o
  .data          0x00000000        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-calloc.o)
@@ -1679,11 +1675,11 @@ LOAD /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi
 .boot2          0x10000000      0x100
                 0x10000000                        __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccNcuQ9h.o
+ .boot2         0x10000000      0x100 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccfeNUHM.o
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x41a8
+.text           0x10000100     0x4230
                 0x10000100                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1748,421 +1744,424 @@ LOAD /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi
  .text.frame_dummy
                 0x100002e4       0x24 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.mcp23s17_init
-                0x10000308       0x6c CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+                0x10000308       0x80 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
                 0x10000308                mcp23s17_init
  .text.mcp23s17_write
-                0x10000374       0x3c CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
-                0x10000374                mcp23s17_write
- .text.main     0x100003b0       0x46 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
-                0x100003b0                main
- *fill*         0x100003f6        0x2 
+                0x10000388       0x32 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+                0x10000388                mcp23s17_write
+ .text.mcp23s17_read
+                0x100003ba       0x3a CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+                0x100003ba                mcp23s17_read
+ .text.main     0x100003f4       0x78 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+                0x100003f4                main
  .text.gpio_set_function
-                0x100003f8       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100003f8                gpio_set_function
+                0x1000046c       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x1000046c                gpio_set_function
  .text.running_on_fpga
-                0x10000428       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
-                0x10000428                running_on_fpga
+                0x1000049c       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+                0x1000049c                running_on_fpga
  .text.hw_claim_lock
-                0x1000043c       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
-                0x1000043c                hw_claim_lock
+                0x100004b0       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x100004b0                hw_claim_lock
  .text.hw_claim_unlock
-                0x10000454       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000454                hw_claim_unlock
+                0x100004c8       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x100004c8                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x10000468       0x32 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000468                hw_claim_or_assert
- *fill*         0x1000049a        0x2 
+                0x100004dc       0x32 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x100004dc                hw_claim_or_assert
+ *fill*         0x1000050e        0x2 
  .text.spin_locks_reset
-                0x1000049c       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
-                0x1000049c                spin_locks_reset
+                0x10000510       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000510                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x100004bc       0x1c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
-                0x100004bc                next_striped_spin_lock_num
+                0x10000530       0x1c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000530                next_striped_spin_lock_num
  .text.set_raw_irq_handler_and_unlock
-                0x100004d8       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000054c       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .text.resolve_branch
-                0x10000500       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000574       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .text.make_branch
-                0x10000530       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x100005a4       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .text.insert_branch_and_link
-                0x10000578       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x100005ec       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x100005b8       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x100005b8                irq_is_enabled
+                0x1000062c       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000062c                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x100005d0       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x100005d0                irq_set_mask_enabled
+                0x10000644       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000644                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x100005f0        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x100005f0                irq_set_enabled
- *fill*         0x100005fe        0x2 
+                0x10000664        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000664                irq_set_enabled
+ *fill*         0x10000672        0x2 
  .text.irq_get_vtable_handler
-                0x10000600       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000600                irq_get_vtable_handler
+                0x10000674       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000674                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10000610       0x54 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000610                irq_set_exclusive_handler
+                0x10000684       0x54 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000684                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x10000664      0x188 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000664                irq_remove_handler
+                0x100006d8      0x188 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x100006d8                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x100007ec       0xf0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x100007ec                irq_add_tail_to_free_list
+                0x10000860       0xf0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000860                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x100008dc       0x1c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x100008dc                irq_init_priorities
+                0x10000950       0x1c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000950                irq_init_priorities
  .text.lock_init
-                0x100008f8       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
-                0x100008f8                lock_init
+                0x1000096c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+                0x1000096c                lock_init
  .text.mutex_init
-                0x10000908       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
-                0x10000908                mutex_init
+                0x1000097c       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x1000097c                mutex_init
  .text.recursive_mutex_init
-                0x10000922       0x1e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
-                0x10000922                recursive_mutex_init
+                0x10000996       0x1e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x10000996                recursive_mutex_init
  .text.time_reached
-                0x10000940       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100009b4       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.get_entry
-                0x10000968       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100009dc       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x100009a0       0x2e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x100009a0                timer_pool_entry_comparator
- *fill*         0x100009ce        0x2 
+                0x10000a14       0x2e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000a14                timer_pool_entry_comparator
+ *fill*         0x10000a42        0x2 
  .text.update_us_since_boot
-                0x100009d0       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000a44       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.delayed_by_us
-                0x100009f4       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000a68       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_get_node
-                0x10000a28       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000a9c       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_contains_node
-                0x10000a58       0x1e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000acc       0x1e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_new_node
-                0x10000a76       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10000a9e        0x2 
+                0x10000aea       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10000b12        0x2 
  .text.ph_add_child_node
-                0x10000aa0       0x6c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000b14       0x6c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_merge_nodes
-                0x10000b0c       0x3e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10000b4a        0x2 
+                0x10000b80       0x3e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10000bbe        0x2 
  .text.ph_insert_node
-                0x10000b4c       0x3c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000bc0       0x3c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_free_node
-                0x10000b88       0x5c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000bfc       0x5c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.get_entry_id_high
-                0x10000be4       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000c58       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.alarm_pool_post_alloc_init
-                0x10000c14       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000c88       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x10000c54       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000cc8       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.get_absolute_time
-                0x10000c84       0x22 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000cf8       0x22 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.make_timeout_time_us
-                0x10000ca6       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10000cca        0x2 
+                0x10000d1a       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10000d3e        0x2 
  .text.add_alarm_under_lock
-                0x10000ccc       0x94 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000d40       0x94 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10000d60      0x210 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000dd4      0x210 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x10000f70       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x10000f70                alarm_pool_init_default
+                0x10000fe4       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000fe4                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x10000fb0       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x10000fb0                alarm_pool_get_default
+                0x10001024       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001024                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x10000fdc      0x10e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x10000fdc                alarm_pool_add_alarm_at
+                0x10001050      0x10e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001050                alarm_pool_add_alarm_at
  .text.add_alarm_at
-                0x100010ea       0x2e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000115e       0x2e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.alarm_pool_cancel_alarm
-                0x10001118       0xa8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x10001118                alarm_pool_cancel_alarm
+                0x1000118c       0xa8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000118c                alarm_pool_cancel_alarm
  .text.cancel_alarm
-                0x100011c0       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001234       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.sleep_until
-                0x100011d0       0xb0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x100011d0                sleep_until
+                0x10001244       0xb0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001244                sleep_until
  .text.sleep_us
-                0x10001280       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x10001280                sleep_us
+                0x100012f4       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100012f4                sleep_us
  .text.sleep_ms
-                0x1000129a       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x1000129a                sleep_ms
- *fill*         0x100012ae        0x2 
+                0x1000130e       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000130e                sleep_ms
+ *fill*         0x10001322        0x2 
  .text.best_effort_wfe_or_timeout
-                0x100012b0       0x44 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x100012b0                best_effort_wfe_or_timeout
+                0x10001324       0x44 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001324                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x100012f4       0x8c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001368       0x8c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001380       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001380                hardware_alarm_claim
+                0x100013f4       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x100013f4                hardware_alarm_claim
  .text.time_us_64
-                0x10001398       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001398                time_us_64
+                0x1000140c       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x1000140c                time_us_64
  .text.busy_wait_until
-                0x100013b0       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x100013b0                busy_wait_until
+                0x10001424       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001424                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x100013d8       0x90 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x100013d8                hardware_alarm_set_callback
+                0x1000144c       0x90 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x1000144c                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10001468       0xe8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001468                hardware_alarm_set_target
+                0x100014dc       0xe8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x100014dc                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10001550       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001550                hardware_alarm_cancel
+                0x100015c4       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x100015c4                hardware_alarm_cancel
  .text.ph_get_node
-                0x10001590       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001604       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .text.ph_add_child_node
-                0x100015c0       0x6c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001634       0x6c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x1000162c       0x3e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x100016a0       0x3e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .text.ph_clear
-                0x1000166a       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x1000166a                ph_clear
+                0x100016de       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x100016de                ph_clear
  .text.ph_post_alloc_init
-                0x1000169e        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x1000169e                ph_post_alloc_init
+                0x10001712        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001712                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x100016ac       0x5c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x100016ac                ph_merge_two_pass
+                0x10001720       0x5c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001720                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x10001708       0xc0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x1000177c       0xc0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x100017c8       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x100017c8                ph_remove_head
+                0x1000183c       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x1000183c                ph_remove_head
  .text.ph_remove_and_free_node
-                0x100017dc       0xa0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x100017dc                ph_remove_and_free_node
+                0x10001850       0xa0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001850                ph_remove_and_free_node
  .text.clock_configure
-                0x1000187c      0x108 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x1000187c                clock_configure
+                0x100018f0      0x108 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100018f0                clock_configure
  .text.clocks_init
-                0x10001984      0x100 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10001984                clocks_init
+                0x100019f8      0x100 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100019f8                clocks_init
  .text.clock_get_hz
-                0x10001a84        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10001a84                clock_get_hz
+                0x10001af8        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10001af8                clock_get_hz
  .text.pll_init
-                0x10001a90      0x120 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
-                0x10001a90                pll_init
+                0x10001b04      0x120 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x10001b04                pll_init
  .text.watchdog_start_tick
-                0x10001bb0       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10001bb0                watchdog_start_tick
+                0x10001c24       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10001c24                watchdog_start_tick
  .text.xosc_init
-                0x10001bc0       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10001bc0                xosc_init
- .text._exit    0x10001be8        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001be8                _exit
- .text.exit     0x10001bec        0x6 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001bec                exit
- *fill*         0x10001bf2        0x2 
+                0x10001c34       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10001c34                xosc_init
+ .text._exit    0x10001c5c        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001c5c                _exit
+ .text.exit     0x10001c60        0x6 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001c60                exit
+ *fill*         0x10001c66        0x2 
  .text.__assert_func
-                0x10001bf4       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001bf4                __assert_func
+                0x10001c68       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001c68                __assert_func
  .text.runtime_init
-                0x10001c2c       0xf8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001c2c                runtime_init
- .text.panic    0x10001d24       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001d24                panic
+                0x10001ca0       0xf8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001ca0                runtime_init
+ .text.panic    0x10001d98       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001d98                panic
  .text._out_null
-                0x10001d54        0x2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10001dc8        0x2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x10001d56        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .text._atoi    0x10001d64       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10001dca        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .text._atoi    0x10001dd8       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x10001d88       0xae CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10001dfc       0xae CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x10001e36      0x110 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10001eaa      0x110 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long
-                0x10001f46       0xbc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10001fba       0xbc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long_long
-                0x10002002      0x10e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x10002110      0x420 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x10002530      0x354 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10002076      0x10e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x10002184      0x420 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x100025a4      0x354 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x10002884      0x668 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x100028f8      0x668 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x10002eec       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
-                0x10002eec                vfctprintf
- .text          0x10002f0c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x10002f60       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10002f60                vfctprintf
+ .text          0x10002f80       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10002f1c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10002f1c                rom_func_lookup
+                0x10002f90       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10002f90                rom_func_lookup
  .text.rom_data_lookup
-                0x10002f2c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10002f2c                rom_data_lookup
+                0x10002fa0       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10002fa0                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10002f3c       0x36 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10002f3c                rom_funcs_lookup
- *fill*         0x10002f72        0x2 
+                0x10002fb0       0x36 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10002fb0                rom_funcs_lookup
+ *fill*         0x10002fe6        0x2 
  .text.__wrap___aeabi_idiv
-                0x10002f74       0x50 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
-                0x10002f74                __wrap___aeabi_idivmod
-                0x10002f74                divmod_s32s32
-                0x10002f74                div_s32s32
-                0x10002f74                __wrap___aeabi_idiv
-                0x10002f7c                divmod_s32s32_unsafe
-                0x10002fa8                divmod_s32s32_savestate
+                0x10002fe8       0x50 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+                0x10002fe8                __wrap___aeabi_idivmod
+                0x10002fe8                divmod_s32s32
+                0x10002fe8                div_s32s32
+                0x10002fe8                __wrap___aeabi_idiv
+                0x10002ff0                divmod_s32s32_unsafe
+                0x1000301c                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x10002fc4       0x4c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
-                0x10002fc4                __wrap___aeabi_uidiv
-                0x10002fc4                __wrap___aeabi_uidivmod
-                0x10002fc4                div_u32u32
-                0x10002fc4                divmod_u32u32
-                0x10002fcc                divmod_u32u32_unsafe
-                0x10002ff4                divmod_u32u32_savestate
+                0x10003038       0x4c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+                0x10003038                __wrap___aeabi_uidiv
+                0x10003038                __wrap___aeabi_uidivmod
+                0x10003038                div_u32u32
+                0x10003038                divmod_u32u32
+                0x10003040                divmod_u32u32_unsafe
+                0x10003068                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x10003010      0x424 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
-                0x10003010                __wrap___aeabi_ldivmod
-                0x10003010                div_s64s64
-                0x10003010                divmod_s64s64
-                0x10003040                divmod_u64u64
-                0x10003040                div_u64u64
-                0x10003040                __wrap___aeabi_uldivmod
-                0x10003050                divmod_u64u64_savestate
-                0x10003070                divmod_s64s64_unsafe
-                0x100030f8                divmod_u64u64_unsafe
+                0x10003084      0x424 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+                0x10003084                __wrap___aeabi_ldivmod
+                0x10003084                div_s64s64
+                0x10003084                divmod_s64s64
+                0x100030b4                divmod_u64u64
+                0x100030b4                div_u64u64
+                0x100030b4                __wrap___aeabi_uldivmod
+                0x100030c4                divmod_u64u64_savestate
+                0x100030e4                divmod_s64s64_unsafe
+                0x1000316c                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x10003434       0x80 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003434                __wrap___aeabi_drsub
-                0x1000343a                __wrap___aeabi_dsub
-                0x1000344c                __wrap___aeabi_dadd
-                0x1000345e                __wrap___aeabi_ddiv
-                0x1000349a                __wrap___aeabi_dmul
+                0x100034a8       0x80 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100034a8                __wrap___aeabi_drsub
+                0x100034ae                __wrap___aeabi_dsub
+                0x100034c0                __wrap___aeabi_dadd
+                0x100034d2                __wrap___aeabi_ddiv
+                0x1000350e                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x100034b4       0x6c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100034b4                __wrap___aeabi_cdrcmple
-                0x100034c4                __wrap___aeabi_cdcmple
-                0x100034c4                __wrap___aeabi_cdcmpeq
+                0x10003528       0x6c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003528                __wrap___aeabi_cdrcmple
+                0x10003538                __wrap___aeabi_cdcmple
+                0x10003538                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x10003520        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003520                __wrap___aeabi_dcmplt
+                0x10003594        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003594                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x1000352c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000352c                __wrap___aeabi_dcmple
+                0x100035a0       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100035a0                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x1000353c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000353c                __wrap___aeabi_dcmpge
+                0x100035b0       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100035b0                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x1000354c        0xa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000354c                __wrap___aeabi_dcmpgt
+                0x100035c0        0xa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100035c0                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x10003556       0x1c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003556                __wrap___aeabi_dcmpun
- *fill*         0x10003572        0x2 
+                0x100035ca       0x1c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100035ca                __wrap___aeabi_dcmpun
+ *fill*         0x100035e6        0x2 
  .text.__wrap___aeabi_i2d
-                0x10003574       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003574                __wrap___aeabi_ui2d
-                0x1000357c                __wrap___aeabi_i2d
+                0x100035e8       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100035e8                __wrap___aeabi_ui2d
+                0x100035f0                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x100035ac       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100035ac                __wrap___aeabi_d2iz
-                0x100035ac                double2int_z
+                0x10003620       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003620                __wrap___aeabi_d2iz
+                0x10003620                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x100035f4       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100035f4                double2uint
-                0x100035f4                __wrap___aeabi_d2uiz
+                0x10003668       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003668                double2uint
+                0x10003668                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x1000360c       0xcc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x1000360c                __aeabi_double_init
+                0x10003680       0xcc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10003680                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x100036d8       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100036d8                double_table_shim_on_use_helper
+                0x1000374c       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000374c                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x1000370c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000370c                drsub_shim
-                0x10003712                dsub_shim
+                0x10003780       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003780                drsub_shim
+                0x10003786                dsub_shim
  .text.dadd_shim
-                0x1000371c      0x15c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000371c                dadd_shim
+                0x10003790      0x15c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003790                dadd_shim
  .text.dmul_shim
-                0x10003878      0x15c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003878                dmul_shim
+                0x100038ec      0x15c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100038ec                dmul_shim
  .text.ddiv_shim
-                0x100039d4      0x1b0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100039d4                ddiv_shim
+                0x10003a48      0x1b0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003a48                ddiv_shim
  .text.double2uint_shim
-                0x10003b84        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003b84                double2uint_shim
-                0x10003b86                double2ufix_shim
- *fill*         0x10003b92        0x2 
+                0x10003bf8        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003bf8                double2uint_shim
+                0x10003bfa                double2ufix_shim
+ *fill*         0x10003c06        0x2 
  .text.double2uint64_shim
-                0x10003b94       0x70 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003b94                double2uint64_shim
-                0x10003b96                double2ufix64_shim
-                0x10003bb6                d2fix_a
+                0x10003c08       0x70 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003c08                double2uint64_shim
+                0x10003c0a                double2ufix64_shim
+                0x10003c2a                d2fix_a
  .text.dunpacks
-                0x10003c04       0x3c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003c04                dunpacks
+                0x10003c78       0x3c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003c78                dunpacks
  .text.__aeabi_lmul
-                0x10003c40       0x32 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10003c40                __wrap___aeabi_lmul
- *fill*         0x10003c72        0x2 
+                0x10003cb4       0x32 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10003cb4                __wrap___aeabi_lmul
+ *fill*         0x10003ce6        0x2 
  .text.__aeabi_float_init
-                0x10003c74       0xfc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10003c74                __aeabi_float_init
+                0x10003ce8       0xfc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10003ce8                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10003d70       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10003d70                float_table_shim_on_use_helper
- .text          0x10003da4       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10003da4                __aeabi_mem_init
- .text.memcpy   0x10003db4        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10003db4                __wrap___aeabi_memcpy
-                0x10003db4                __wrap_memcpy
+                0x10003de4       0x34 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10003de4                float_table_shim_on_use_helper
+ .text          0x10003e18       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10003e18                __aeabi_mem_init
+ .text.memcpy   0x10003e28        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10003e28                __wrap___aeabi_memcpy
+                0x10003e28                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x10003dc0        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10003dce        0x2 
+                0x10003e34        0xe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10003e42        0x2 
  .text.stdio_out_chars_crlf
-                0x10003dd0       0x80 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003e44       0x80 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush
-                0x10003e50       0x44 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003ec4       0x44 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x10003e94       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003f08       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.update_us_since_boot
-                0x10003eb4       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003f28       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.get_absolute_time
-                0x10003ed8       0x22 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10003efa        0x2 
+                0x10003f4c       0x22 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10003f6e        0x2 
  .text.delayed_by_ms
-                0x10003efc       0x44 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003f70       0x44 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.make_timeout_time_ms
-                0x10003f40       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003fb4       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x10003f60       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10003f60                stdout_serialize_begin
+                0x10003fd4       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003fd4                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x10003f80       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10003f80                stdout_serialize_end
+                0x10003ff4       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003ff4                stdout_serialize_end
  .text.stdio_put_string
-                0x10003f90       0x98 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004004       0x98 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_flush
-                0x10004028       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004028                stdio_flush
+                0x1000409c       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000409c                stdio_flush
  .text.__wrap_puts
-                0x10004048       0x1e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004048                __wrap_puts
- *fill*         0x10004066        0x2 
+                0x100040bc       0x1e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100040bc                __wrap_puts
+ *fill*         0x100040da        0x2 
  .text.__wrap_vprintf
-                0x10004068       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004068                __wrap_vprintf
+                0x100040dc       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100040dc                __wrap_vprintf
  .text.__wrap_printf
-                0x100040a8       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100040a8                __wrap_printf
+                0x1000411c       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000411c                __wrap_printf
  .text.spi_set_baudrate
-                0x100040c0       0xc2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
-                0x100040c0                spi_set_baudrate
- *fill*         0x10004182        0x2 
+                0x10004134       0xc2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+                0x10004134                spi_set_baudrate
+ *fill*         0x100041f6        0x2 
  .text.spi_init
-                0x10004184       0x74 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
-                0x10004184                spi_init
- .text.strlen   0x100041f8       0x5c /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
-                0x100041f8                strlen
+                0x100041f8       0x74 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+                0x100041f8                spi_init
+ .text.strlen   0x1000426c       0x5c /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+                0x1000426c                strlen
  *(.fini)
- .fini          0x10004254        0x4 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crti.o
-                0x10004254                _fini
- .fini.__stub   0x10004258       0x50 linker stubs
+ .fini          0x100042c8        0x4 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crti.o
+                0x100042c8                _fini
+ *fill*         0x100042cc        0x4 
+ .fini.__stub   0x100042d0       0x60 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2174,231 +2173,231 @@ LOAD /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x100042a8        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x100042a8                        . = ALIGN (0x4)
+ .eh_frame      0x10004330        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10004330                        . = ALIGN (0x4)
 
-.glue_7         0x100042a8        0x0
- .glue_7        0x100042a8        0x0 linker stubs
+.glue_7         0x10004330        0x0
+ .glue_7        0x10004330        0x0 linker stubs
 
-.glue_7t        0x100042a8        0x0
- .glue_7t       0x100042a8        0x0 linker stubs
+.glue_7t        0x10004330        0x0
+ .glue_7t       0x10004330        0x0 linker stubs
 
-.vfp11_veneer   0x100042a8        0x0
- .vfp11_veneer  0x100042a8        0x0 linker stubs
+.vfp11_veneer   0x10004330        0x0
+ .vfp11_veneer  0x10004330        0x0 linker stubs
 
-.v4_bx          0x100042a8        0x0
- .v4_bx         0x100042a8        0x0 linker stubs
+.v4_bx          0x10004330        0x0
+ .v4_bx         0x10004330        0x0 linker stubs
 
-.iplt           0x100042a8        0x0
- .iplt          0x100042a8        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10004330        0x0
+ .iplt          0x10004330        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x100042a8      0xe5c
+.rodata         0x10004330      0xe5c
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.resolve_branch.str1.4
-                0x100042a8      0x9e4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004330      0x9e4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
                                  0x5f (size before relaxing)
  .rodata.make_branch.str1.4
-                0x10004c8c       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004d14       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.insert_branch_and_link.str1.4
-                0x10004c8c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004d14       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_set_exclusive_handler.str1.4
-                0x10004c8c       0x36 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004d14       0x36 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_remove_handler.str1.4
-                0x10004c8c       0x3a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004d14       0x3a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x10004c8c       0x3a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004d14       0x3a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.0
-                0x10004c8c       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004ca6        0x2 
+                0x10004d14       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004d2e        0x2 
  .rodata.__func__.1
-                0x10004ca8       0x17 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004cbf        0x1 
+                0x10004d30       0x17 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004d47        0x1 
  .rodata.__func__.2
-                0x10004cc0       0x13 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004cd3        0x1 
+                0x10004d48       0x13 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004d5b        0x1 
  .rodata.__func__.3
-                0x10004cd4        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004d5c        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4
-                0x10004ce0        0xf CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004cef        0x1 
+                0x10004d68        0xf CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004d77        0x1 
  .rodata.__func__.6
-                0x10004cf0       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004d78       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.str1.4
-                0x10004d0a       0x95 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- *fill*         0x10004d0a        0x2 
+                0x10004d92       0x95 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ *fill*         0x10004d92        0x2 
  .rodata.__func__.1
-                0x10004d0c        0xb CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- *fill*         0x10004d17        0x1 
+                0x10004d94        0xb CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ *fill*         0x10004d9f        0x1 
  .rodata.__func__.3
-                0x10004d18       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x10004da0       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
  .rodata.get_entry.str1.4
-                0x10004d30       0x65 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x65 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.update_us_since_boot.str1.4
-                0x10004d30       0x6b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x6b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.ph_get_node.str1.4
-                0x10004d30       0x70 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x70 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x10004d30       0x2e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x2e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.ph_insert_node.str1.4
-                0x10004d30        0x3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8        0x3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.ph_free_node.str1.4
-                0x10004d30       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.add_alarm_under_lock.str1.4
-                0x10004d30       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x10004d30       0x60 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x60 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.alarm_pool_get_default.str1.4
-                0x10004d30       0x21 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x21 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.alarm_pool_cancel_alarm.str1.4
-                0x10004d30       0x27 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x27 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.sleep_until.str1.4
-                0x10004d30       0x4d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x4d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.__func__.1
-                0x10004d30       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004db8       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.__func__.3
-                0x10004d48       0x17 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10004d5f        0x1 
+                0x10004dd0       0x17 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10004de7        0x1 
  .rodata.__func__.4
-                0x10004d60       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10004d72        0x2 
+                0x10004de8       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10004dfa        0x2 
  .rodata.__func__.5
-                0x10004d74        0xd CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10004d81        0x3 
+                0x10004dfc        0xd CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10004e09        0x3 
  .rodata.__func__.6
-                0x10004d84       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10004d96        0x2 
+                0x10004e0c       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10004e1e        0x2 
  .rodata.__func__.7
-                0x10004d98        0xf CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10004da7        0x1 
+                0x10004e20        0xf CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10004e2f        0x1 
  .rodata.__func__.8
-                0x10004da8        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004e30        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.__func__.9
-                0x10004db4       0x15 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10004dc9        0x3 
+                0x10004e3c       0x15 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10004e51        0x3 
  .rodata.__func__.10
-                0x10004dcc       0x15 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10004de1        0x3 
+                0x10004e54       0x15 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10004e69        0x3 
  .rodata.__func__.11
-                0x10004de4       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10004dfe        0x2 
+                0x10004e6c       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10004e86        0x2 
  .rodata.__func__.12
-                0x10004e00        0xa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10004e88        0xa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.hardware_alarm_claim.str1.4
-                0x10004e0a       0x22 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10004e92       0x22 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.hardware_alarm_set_target.str1.4
-                0x10004e0a       0x6f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10004e0a        0x2 
+                0x10004e92       0x6f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10004e92        0x2 
  .rodata.__func__.0
-                0x10004e0c       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10004e94       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.ph_get_node.str1.4
-                0x10004e26       0x70 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10004eae       0x70 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x10004e26       0x2e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10004eae       0x2e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.ph_remove_any_head.str1.4
-                0x10004e26       0xac CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10004eae       0xac CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.ph_remove_and_free_node.str1.4
-                0x10004e26       0x26 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- *fill*         0x10004e26        0x2 
+                0x10004eae       0x26 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ *fill*         0x10004eae        0x2 
  .rodata.__func__.0
-                0x10004e28       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10004eb0       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.__func__.1
-                0x10004e40       0x13 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- *fill*         0x10004e53        0x1 
+                0x10004ec8       0x13 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ *fill*         0x10004edb        0x1 
  .rodata.__func__.2
-                0x10004e54       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- *fill*         0x10004e66        0x2 
+                0x10004edc       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ *fill*         0x10004eee        0x2 
  .rodata.__func__.3
-                0x10004e68        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10004ef0        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.clock_configure.str1.4
-                0x10004e74       0x61 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10004efc       0x61 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.__func__.1
-                0x10004e74       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10004efc       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.pll_init.str1.4
-                0x10004e84      0x12c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x10004f0c      0x12c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
  .rodata.__func__.0
-                0x10004e84        0x9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x10004f0c        0x9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
  .rodata.__assert_func.str1.4
-                0x10004e8d       0x43 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10004f15       0x43 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.runtime_init.str1.4
-                0x10004e8d       0x6b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10004f15       0x6b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.panic.str1.4
-                0x10004e8d       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10004e8d        0x3 
+                0x10004f15       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10004f15        0x3 
  .rodata.__func__.2
-                0x10004e90        0xd CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10004f18        0xd CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x10004e9d       0x15 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10004e9d        0x3 
+                0x10004f25       0x15 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10004f25        0x3 
  .rodata._vsnprintf
-                0x10004ea0      0x19c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x1000503c        0x4 
+                0x10004f28      0x19c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x100050c4        0x4 
  .rodata.pow10.0
-                0x10005040       0x50 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x100050c8       0x50 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x10005090       0xa6 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10005118       0xa6 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__func__.0
-                0x10005090       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10005118       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x100050a4       0x88 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x1000512c       0x88 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.__func__.0
-                0x100050a4       0x13 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x1000512c       0x13 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.str1.4
-                0x100050b7       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- *fill*         0x100050b7        0x1 
+                0x1000513f       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ *fill*         0x1000513f        0x1 
  .rodata.__bi_81
-                0x100050b8        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005140        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x100050c4        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000514c        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_56
-                0x100050d0        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005158        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x100050dc        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005164        0xc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.update_us_since_boot.str1.4
-                0x100050e8       0x6b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10005170       0x6b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .rodata.crlf_str.2
-                0x100050e8        0x2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x100050ea        0x2 
+                0x10005170        0x2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10005172        0x2 
  .rodata.__func__.3
-                0x100050ec       0x15 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10005104                        . = ALIGN (0x4)
- *fill*         0x10005101        0x3 
+                0x10005174       0x15 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000518c                        . = ALIGN (0x4)
+ *fill*         0x10005189        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10005104                        . = ALIGN (0x4)
+                0x1000518c                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10005104                        __exidx_start = .
+                0x1000518c                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10005104                        __exidx_end = .
-                0x10005104                        . = ALIGN (0x4)
-                0x10005104                        __binary_info_start = .
+                0x1000518c                        __exidx_end = .
+                0x1000518c                        . = ALIGN (0x4)
+                0x1000518c                        __binary_info_start = .
 
-.binary_info    0x10005104       0x20
+.binary_info    0x1000518c       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr81
-                0x10005104        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000518c        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10005108        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005190        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr56
-                0x1000510c        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005194        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10005110        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005198        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10005114        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000519c        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x10005118        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100051a0        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x1000511c        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100051a4        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr22
-                0x10005120        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100051a8        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
-                0x10005124                        __binary_info_end = .
+                0x100051ac                        __binary_info_end = .
 
-.rel.dyn        0x10005124        0x0
- .rel.iplt      0x10005124        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10005124                        . = ALIGN (0x4)
+.rel.dyn        0x100051ac        0x0
+ .rel.iplt      0x100051ac        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x100051ac                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2407,7 +2406,7 @@ LOAD /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi
                 0x20000000       0xc0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0x26c load address 0x10005124
+.data           0x200000c0      0x2ac load address 0x100051ac
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2424,151 +2423,153 @@ LOAD /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi
  .time_critical.mutex_exit
                 0x200001c8       0x4c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
                 0x200001c8                mutex_exit
+ .time_critical.spi_write_read_blocking
+                0x20000214       0x42 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+                0x20000214                spi_write_read_blocking
  .time_critical.spi_write_blocking
-                0x20000214       0x3a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
-                0x20000214                spi_write_blocking
+                0x20000256       0x3a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+                0x20000256                spi_write_blocking
  *(.text*)
- *fill*         0x2000024e        0x2 
- .text          0x20000250        0x4 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
-                0x20000250                __aeabi_ldiv0
-                0x20000250                __aeabi_idiv0
- *fill*         0x20000254        0x4 
- .text.__stub   0x20000258       0x20 linker stubs
-                0x20000278                        . = ALIGN (0x4)
+ .text          0x20000290        0x4 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x20000290                __aeabi_ldiv0
+                0x20000290                __aeabi_idiv0
+ *fill*         0x20000294        0x4 
+ .text.__stub   0x20000298       0x20 linker stubs
+                0x200002b8                        . = ALIGN (0x4)
  *(.rodata*)
-                0x20000278                        . = ALIGN (0x4)
+                0x200002b8                        . = ALIGN (0x4)
  *(.data*)
  .data.striped_spin_lock_num
-                0x20000278        0x1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x20000279        0x3 
- .data          0x2000027c       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-                0x2000027c                irq_handler_chain_slots
-                0x200002ac                irq_handler_chain_first_slot
-                0x200002b6                irq_handler_chain_remove_tail
+                0x200002b8        0x1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x200002b9        0x3 
+ .data          0x200002bc       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+                0x200002bc                irq_handler_chain_slots
+                0x200002ec                irq_handler_chain_first_slot
+                0x200002f6                irq_handler_chain_remove_tail
  .data.default_alarm_pool
-                0x200002c4       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x20000304       0x18 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .data.default_alarm_pool_heap
-                0x200002dc       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x200002ec        0x4 
+                0x2000031c       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x2000032c        0x4 
  .data.aeabi_bits_funcs
-                0x200002f0       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-                0x200002f0                aeabi_bits_funcs
-                0x20000300                aeabi_bits_funcs_end
+                0x20000330       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x20000330                aeabi_bits_funcs
+                0x20000340                aeabi_bits_funcs_end
  .data.aeabi_mem_funcs
-                0x20000300       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x20000300                aeabi_mem_funcs
-                0x20000310                aeabi_mem_funcs_end
-                0x20000310                        . = ALIGN (0x4)
+                0x20000340       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x20000340                aeabi_mem_funcs
+                0x20000350                aeabi_mem_funcs_end
+                0x20000350                        . = ALIGN (0x4)
  *(.after_data.*)
-                0x20000310                        . = ALIGN (0x4)
-                0x20000310                        PROVIDE (__mutex_array_start = .)
+                0x20000350                        . = ALIGN (0x4)
+                0x20000350                        PROVIDE (__mutex_array_start = .)
  *(SORT_BY_NAME(.mutex_array.*))
  *(.mutex_array)
- .mutex_array   0x20000310        0x8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x20000318                        PROVIDE (__mutex_array_end = .)
-                0x20000318                        . = ALIGN (0x4)
-                0x20000318                        PROVIDE (__preinit_array_start = .)
+ .mutex_array   0x20000350        0x8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x20000358                        PROVIDE (__mutex_array_end = .)
+                0x20000358                        . = ALIGN (0x4)
+                0x20000358                        PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00001
-                0x20000318        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x20000358        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .preinit_array.00010
-                0x2000031c        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x2000035c        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .preinit_array.00020
-                0x20000320        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x20000360        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
  .preinit_array.00020
-                0x20000324        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x20000364        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
  *(.preinit_array)
-                0x20000328                        PROVIDE (__preinit_array_end = .)
-                0x20000328                        . = ALIGN (0x4)
-                0x20000328                        PROVIDE (__init_array_start = .)
+                0x20000368                        PROVIDE (__preinit_array_end = .)
+                0x20000368                        . = ALIGN (0x4)
+                0x20000368                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x20000328        0x4 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x2000032c                        PROVIDE (__init_array_end = .)
-                0x2000032c                        . = ALIGN (0x4)
+ .init_array    0x20000368        0x4 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x2000036c                        PROVIDE (__init_array_end = .)
+                0x2000036c                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
                 [!provide]                        PROVIDE (__fini_array_end = .)
  *(.jcr)
-                0x2000032c                        . = ALIGN (0x4)
-                0x2000032c                        __data_end__ = .
-                0x10005124                        __etext = LOADADDR (.data)
+                0x2000036c                        . = ALIGN (0x4)
+                0x2000036c                        __data_end__ = .
+                0x100051ac                        __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x2000032c        0x0 load address 0x10005390
+                0x2000036c        0x0 load address 0x10005458
  .tm_clone_table
-                0x2000032c        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x2000036c        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
-                0x2000032c        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtend.o
+                0x2000036c        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x2000032c        0x0 load address 0x10005390
- .igot.plt      0x2000032c        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+.igot.plt       0x2000036c        0x0 load address 0x10005458
+ .igot.plt      0x2000036c        0x0 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x2000032c        0x0 load address 0x10005390
-                0x2000032c                        . = ALIGN (0x4)
+                0x2000036c        0x0 load address 0x10005458
+                0x2000036c                        . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10005390
+.scratch_x      0x20040000        0x0 load address 0x10005458
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x10005390                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10005458                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10005390
+.scratch_y      0x20041000        0x0 load address 0x10005458
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x10005390                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10005458                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x20000330      0x3c4
-                0x20000330                        . = ALIGN (0x4)
-                0x20000330                        __bss_start__ = .
+.bss            0x20000370      0x3c4
+                0x20000370                        . = ALIGN (0x4)
+                0x20000370                        __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
  .bss.default_alarm_pool_entries
-                0x20000330      0x100 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x20000370      0x100 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .bss.alarm_callbacks
-                0x20000430       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x20000470       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .bss.configured_freq
-                0x20000440       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x20000480       0x28 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
  .bss.default_alarm_pool_entry_ids_high
-                0x20000468       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x200004a8       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .bss.default_alarm_pool_heap_nodes
-                0x20000478       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .bss.drivers   0x200004a8        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.filter    0x200004ac        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.object.0  0x200004b0       0x18 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
- .bss.pools     0x200004c8       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .bss.sd_table  0x200004d8      0x100 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x200004d8                sd_table
+                0x200004b8       0x30 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .bss.drivers   0x200004e8        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.filter    0x200004ec        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.object.0  0x200004f0       0x18 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+ .bss.pools     0x20000508       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .bss.sd_table  0x20000518      0x100 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x20000518                sd_table
  .bss.sf_clz_func
-                0x200005d8        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x200005d8                sf_clz_func
- .bss.sf_table  0x200005dc      0x100 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x200005dc                sf_table
+                0x20000618        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x20000618                sf_clz_func
+ .bss.sf_table  0x2000061c      0x100 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x2000061c                sf_table
  .bss.sleep_notifier
-                0x200006dc        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x2000071c        0x4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .bss.target_hi
-                0x200006e0       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .bss.claimed   0x200006f0        0x1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x20000720       0x10 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .bss.claimed   0x20000730        0x1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .bss.irq_hander_chain_free_slot_head
-                0x200006f1        0x1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x20000731        0x1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .bss.timer_callbacks_pending
-                0x200006f2        0x1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x20000732        0x1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  *(COMMON)
-                0x200006f4                        . = ALIGN (0x4)
- *fill*         0x200006f3        0x1 
-                0x200006f4                        __bss_end__ = .
+                0x20000734                        . = ALIGN (0x4)
+ *fill*         0x20000733        0x1 
+                0x20000734                        __bss_end__ = .
 
-.heap           0x200006f4      0x800
-                0x200006f4                        __end__ = .
-                0x200006f4                        end = __end__
+.heap           0x20000734      0x800
+                0x20000734                        __end__ = .
+                0x20000734                        end = __end__
  *(.heap*)
- .heap          0x200006f4      0x800 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x20000ef4                        __HeapLimit = .
+ .heap          0x20000734      0x800 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x20000f34                        __HeapLimit = .
 
 .stack1_dummy
  *(.stack1*)
@@ -2577,8 +2578,8 @@ LOAD /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10005390        0x0
-                0x10005390                        PROVIDE (__flash_binary_end = .)
+.flash_end      0x10005458        0x0
+                0x10005458                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2634,7 +2635,7 @@ LOAD CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_co
 LOAD CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 LOAD CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
-LOAD /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccNcuQ9h.o
+LOAD /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccfeNUHM.o
 LOAD /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2725,7 +2726,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000566       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
  .ARM.attributes
-                0x00000592       0x22 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccNcuQ9h.o
+                0x00000592       0x22 /var/folders/1r/bfx7srys4bnb5ws7gch1p0nr0000gp/T//ccfeNUHM.o
  .ARM.attributes
                 0x000005b4       0x1e /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -2759,120 +2760,120 @@ LOAD linker stubs
  .comment       0x00000044       0x45 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .comment       0x00000044       0x45 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
 
-.debug_info     0x00000000    0x142b9
- .debug_info    0x00000000      0xec1 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
- .debug_info    0x00000ec1     0x184b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x0000270c      0x1fb CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x00002907      0x69a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x00002fa1      0x5fa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x0000359b     0x1c43 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x000051de      0x1a3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x00005381     0x1d29 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_info    0x000070aa     0x33f9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_info    0x0000a4a3     0x145b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x0000b8fe      0xe82 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_info    0x0000c780      0xfe7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x0000d767      0x505 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x0000dc6c      0x4d8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x0000e144      0x1c7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x0000e30b      0xf23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x0000f22e     0x19db CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x00010c09       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x00010c2c      0x331 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x00010f5d       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x00010f80       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x00010fa3      0x33b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x000112de       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x00011301       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x00011325       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x00011348      0x34f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x00011697       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x000116ba       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x000116dd       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x00011700      0x2e2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x000119e2     0x1743 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x00013125     0x1194 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+.debug_info     0x00000000    0x14394
+ .debug_info    0x00000000      0xf9c CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+ .debug_info    0x00000f9c     0x184b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x000027e7      0x1fb CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x000029e2      0x69a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x0000307c      0x5fa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x00003676     0x1c43 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x000052b9      0x1a3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x0000545c     0x1d29 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x00007185     0x33f9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_info    0x0000a57e     0x145b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0000b9d9      0xe82 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_info    0x0000c85b      0xfe7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x0000d842      0x505 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x0000dd47      0x4d8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x0000e21f      0x1c7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x0000e3e6      0xf23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x0000f309     0x19db CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x00010ce4       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x00010d07      0x331 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x00011038       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x0001105b       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x0001107e      0x33b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x000113b9       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x000113dc       0x24 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x00011400       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x00011423      0x34f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x00011772       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x00011795       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x000117b8       0x23 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x000117db      0x2e2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x00011abd     0x1743 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x00013200     0x1194 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
 
-.debug_abbrev   0x00000000     0x4226
- .debug_abbrev  0x00000000      0x329 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
- .debug_abbrev  0x00000329      0x3a6 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_abbrev  0x000006cf       0xf8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_abbrev  0x000007c7      0x2ce CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_abbrev  0x00000a95      0x249 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_abbrev  0x00000cde      0x500 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_abbrev  0x000011de      0x116 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_abbrev  0x000012f4      0x3f1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_abbrev  0x000016e5      0x5c3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_abbrev  0x00001ca8      0x3d5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_abbrev  0x0000207d      0x290 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_abbrev  0x0000230d      0x434 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_abbrev  0x00002741      0x1e7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_abbrev  0x00002928      0x1a8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_abbrev  0x00002ad0      0x10c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_abbrev  0x00002bdc      0x530 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_abbrev  0x0000310c      0x371 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_abbrev  0x0000347d       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_abbrev  0x0000348f      0x167 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_abbrev  0x000035f6       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_abbrev  0x00003608       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_abbrev  0x0000361a      0x1c3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_abbrev  0x000037dd       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_abbrev  0x000037ef       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_abbrev  0x00003803       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_abbrev  0x00003815      0x1c6 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_abbrev  0x000039db       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_abbrev  0x000039ed       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_abbrev  0x000039ff       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_abbrev  0x00003a11       0xb8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_abbrev  0x00003ac9      0x47a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_abbrev  0x00003f43      0x2e3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+.debug_abbrev   0x00000000     0x422e
+ .debug_abbrev  0x00000000      0x331 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+ .debug_abbrev  0x00000331      0x3a6 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_abbrev  0x000006d7       0xf8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_abbrev  0x000007cf      0x2ce CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_abbrev  0x00000a9d      0x249 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_abbrev  0x00000ce6      0x500 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_abbrev  0x000011e6      0x116 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_abbrev  0x000012fc      0x3f1 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_abbrev  0x000016ed      0x5c3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_abbrev  0x00001cb0      0x3d5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_abbrev  0x00002085      0x290 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_abbrev  0x00002315      0x434 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_abbrev  0x00002749      0x1e7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_abbrev  0x00002930      0x1a8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_abbrev  0x00002ad8      0x10c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_abbrev  0x00002be4      0x530 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_abbrev  0x00003114      0x371 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_abbrev  0x00003485       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_abbrev  0x00003497      0x167 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_abbrev  0x000035fe       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_abbrev  0x00003610       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_abbrev  0x00003622      0x1c3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_abbrev  0x000037e5       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_abbrev  0x000037f7       0x14 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_abbrev  0x0000380b       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_abbrev  0x0000381d      0x1c6 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_abbrev  0x000039e3       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_abbrev  0x000039f5       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_abbrev  0x00003a07       0x12 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_abbrev  0x00003a19       0xb8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_abbrev  0x00003ad1      0x47a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_abbrev  0x00003f4b      0x2e3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
 
 .debug_loclists
-                0x00000000     0x84c0
+                0x00000000     0x854b
  .debug_loclists
-                0x00000000      0x2a5 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+                0x00000000      0x330 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
  .debug_loclists
-                0x000002a5      0xb61 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000330      0xb61 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_loclists
-                0x00000e06       0xad CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+                0x00000e91       0xad CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
  .debug_loclists
-                0x00000eb3      0x2af CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x00000f3e      0x2af CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
  .debug_loclists
-                0x00001162      0x182 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+                0x000011ed      0x182 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
  .debug_loclists
-                0x000012e4      0xdb7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000136f      0xdb7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .debug_loclists
-                0x0000209b       0x50 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+                0x00002126       0x50 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
  .debug_loclists
-                0x000020eb      0xa5b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x00002176      0xa5b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
  .debug_loclists
-                0x00002b46     0x146a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x00002bd1     0x146a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .debug_loclists
-                0x00003fb0      0x698 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000403b      0x698 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .debug_loclists
-                0x00004648      0x7aa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x000046d3      0x7aa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .debug_loclists
-                0x00004df2      0x5c2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x00004e7d      0x5c2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
  .debug_loclists
-                0x000053b4      0x214 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000543f      0x214 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
  .debug_loclists
-                0x000055c8      0x1fd CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x00005653      0x1fd CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .debug_loclists
-                0x000057c5       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x00005850       0x48 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
  .debug_loclists
-                0x0000580d      0x3d9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00005898      0x3d9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .debug_loclists
-                0x00005be6     0x16f9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x00005c71     0x16f9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .debug_loclists
-                0x000072df      0x14d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000736a      0x14d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
  .debug_loclists
-                0x0000742c       0x41 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x000074b7       0x41 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
  .debug_loclists
-                0x0000746d       0x4f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x000074f8       0x4f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
  .debug_loclists
-                0x000074bc      0x8c3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00007547      0x8c3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .debug_loclists
-                0x00007d7f      0x741 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+                0x00007e0a      0x741 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
 
 .debug_aranges  0x00000000      0xf38
  .debug_aranges
@@ -2941,161 +2942,161 @@ LOAD linker stubs
                 0x00000ed0       0x68 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
 
 .debug_rnglists
-                0x00000000      0xd51
+                0x00000000      0xd52
  .debug_rnglists
-                0x00000000       0x25 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+                0x00000000       0x26 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
  .debug_rnglists
-                0x00000025       0xec CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000026       0xec CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_rnglists
-                0x00000111       0x19 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+                0x00000112       0x19 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
  .debug_rnglists
-                0x0000012a       0x31 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000012b       0x31 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
  .debug_rnglists
-                0x0000015b       0x3d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000015c       0x3d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
  .debug_rnglists
-                0x00000198       0xf0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000199       0xf0 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .debug_rnglists
-                0x00000288       0x13 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+                0x00000289       0x13 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
  .debug_rnglists
-                0x0000029b       0xe7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x0000029c       0xe7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
  .debug_rnglists
-                0x00000382      0x17a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x00000383      0x17a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .debug_rnglists
-                0x000004fc       0x6a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x000004fd       0x6a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .debug_rnglists
-                0x00000566       0x8e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x00000567       0x8e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .debug_rnglists
-                0x000005f4       0x51 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x000005f5       0x51 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
  .debug_rnglists
-                0x00000645       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x00000646       0x1a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
  .debug_rnglists
-                0x0000065f       0x3d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x00000660       0x3d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .debug_rnglists
-                0x0000069c       0x1f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000069d       0x1f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
  .debug_rnglists
-                0x000006bb       0x7a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000006bc       0x7a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .debug_rnglists
-                0x00000735       0xe5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x00000736       0xe5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .debug_rnglists
-                0x0000081a       0x49 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000081b       0x49 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .debug_rnglists
-                0x00000863       0x2b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x00000864       0x2b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
  .debug_rnglists
-                0x0000088e       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+                0x0000088f       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
  .debug_rnglists
-                0x000008ba       0xed CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x000008bb       0xed CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
  .debug_rnglists
-                0x000009a7       0x21 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x000009a8       0x21 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
  .debug_rnglists
-                0x000009c8       0x99 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x000009c9       0x99 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .debug_rnglists
-                0x00000a61       0xdf CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000a62       0xdf CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
  .debug_rnglists
-                0x00000b40       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x00000b41       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
  .debug_rnglists
-                0x00000b60       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x00000b61       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .debug_rnglists
-                0x00000b98       0x25 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000b99       0x25 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .debug_rnglists
-                0x00000bbd       0x1b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x00000bbe       0x1b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
  .debug_rnglists
-                0x00000bd8      0x117 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000bd9      0x117 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .debug_rnglists
-                0x00000cef       0x62 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+                0x00000cf0       0x62 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
 
-.debug_line     0x00000000     0xe2e8
- .debug_line    0x00000000      0x633 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
- .debug_line    0x00000633      0xc39 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x0000126c      0x2a5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x00001511      0x4ae CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x000019bf      0x498 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x00001e57     0x109e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x00002ef5      0x256 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x0000314b     0x110e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_line    0x00004259     0x1a08 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_line    0x00005c61      0xc47 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x000068a8      0x83b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_line    0x000070e3      0xa5d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x00007b40      0x53b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x0000807b      0x47c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x000084f7      0x2c3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x000087ba      0xb50 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0000930a     0x12cc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x0000a5d6      0x11a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x0000a6f0      0x289 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x0000a979      0x2a9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x0000ac22      0x3fa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x0000b01c      0x3d4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x0000b3f0      0x66c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x0000ba5c       0x61 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x0000babd      0x3b2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x0000be6f      0x3c9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x0000c238      0x198 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x0000c3d0       0x94 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x0000c464       0xa5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x0000c509      0x1e7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x0000c6f0      0xf20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x0000d610      0xcd8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+.debug_line     0x00000000     0xe316
+ .debug_line    0x00000000      0x661 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+ .debug_line    0x00000661      0xc39 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x0000129a      0x2a5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x0000153f      0x4ae CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x000019ed      0x498 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x00001e85     0x109e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x00002f23      0x256 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x00003179     0x110e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x00004287     0x1a08 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_line    0x00005c8f      0xc47 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x000068d6      0x83b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_line    0x00007111      0xa5d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x00007b6e      0x53b CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x000080a9      0x47c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x00008525      0x2c3 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x000087e8      0xb50 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x00009338     0x12cc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x0000a604      0x11a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x0000a71e      0x289 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x0000a9a7      0x2a9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x0000ac50      0x3fa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x0000b04a      0x3d4 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x0000b41e      0x66c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x0000ba8a       0x61 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x0000baeb      0x3b2 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x0000be9d      0x3c9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x0000c266      0x198 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x0000c3fe       0x94 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x0000c492       0xa5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x0000c537      0x1e7 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x0000c71e      0xf20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x0000d63e      0xcd8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
 
-.debug_str      0x00000000     0x3881
- .debug_str     0x00000000     0x3881 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
-                                0x76a (size before relaxing)
- .debug_str     0x00003881      0xa06 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_str     0x00003881      0x22d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_str     0x00003881      0x371 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_str     0x00003881      0x358 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_str     0x00003881      0x826 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_str     0x00003881      0x20e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_str     0x00003881      0x600 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_str     0x00003881      0xc83 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_str     0x00003881      0x738 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_str     0x00003881      0x3fe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_str     0x00003881      0x6d5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_str     0x00003881      0x2e9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_str     0x00003881      0x32f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_str     0x00003881      0x22c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_str     0x00003881      0x7ef CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_str     0x00003881      0x48d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_str     0x00003881       0x88 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_str     0x00003881      0x284 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_str     0x00003881       0x82 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_str     0x00003881       0x86 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_str     0x00003881      0x2cd CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_str     0x00003881       0x8c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_str     0x00003881       0x91 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_str     0x00003881       0x84 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_str     0x00003881      0x2c9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_str     0x00003881       0x8a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_str     0x00003881       0x88 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_str     0x00003881       0x85 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_str     0x00003881      0x429 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_str     0x00003881      0x9da CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_str     0x00003881      0x5aa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+.debug_str      0x00000000     0x3897
+ .debug_str     0x00000000     0x3897 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+                                0x780 (size before relaxing)
+ .debug_str     0x00003897      0xa06 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_str     0x00003897      0x22d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_str     0x00003897      0x371 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_str     0x00003897      0x358 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_str     0x00003897      0x826 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_str     0x00003897      0x20e CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_str     0x00003897      0x600 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_str     0x00003897      0xc83 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_str     0x00003897      0x738 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_str     0x00003897      0x3fe CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_str     0x00003897      0x6d5 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_str     0x00003897      0x2e9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_str     0x00003897      0x32f CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_str     0x00003897      0x22c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_str     0x00003897      0x7ef CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_str     0x00003897      0x48d CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_str     0x00003897       0x88 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_str     0x00003897      0x284 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_str     0x00003897       0x82 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_str     0x00003897       0x86 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_str     0x00003897      0x2cd CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_str     0x00003897       0x8c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_str     0x00003897       0x91 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_str     0x00003897       0x84 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_str     0x00003897      0x2c9 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_str     0x00003897       0x8a CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_str     0x00003897       0x88 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_str     0x00003897       0x85 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_str     0x00003897      0x429 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_str     0x00003897      0x9da CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_str     0x00003897      0x5aa CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
 
-.debug_frame    0x00000000     0x1c2c
- .debug_frame   0x00000000       0x70 CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
- .debug_frame   0x00000070      0x278 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_frame   0x000002e8       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_frame   0x00000320       0x9c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_frame   0x000003bc       0xc8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_frame   0x00000484      0x228 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_frame   0x000006ac       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_frame   0x000006cc      0x254 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_frame   0x00000920      0x464 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_frame   0x00000d84      0x17c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_frame   0x00000f00      0x198 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_frame   0x00001098      0x130 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_frame   0x000011c8       0x44 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_frame   0x0000120c       0xa8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_frame   0x000012b4       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_frame   0x000012f4      0x18c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_frame   0x00001480      0x1fc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_frame   0x0000167c       0x64 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_frame   0x000016e0       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_frame   0x0000170c       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_frame   0x00001738      0x398 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_frame   0x00001ad0      0x134 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
- .debug_frame   0x00001c04       0x28 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+.debug_frame    0x00000000     0x1c48
+ .debug_frame   0x00000000       0x8c CMakeFiles/pico-MCP23S17.dir/pico-MCP23S17.c.obj
+ .debug_frame   0x0000008c      0x278 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_frame   0x00000304       0x38 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_frame   0x0000033c       0x9c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_frame   0x000003d8       0xc8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_frame   0x000004a0      0x228 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_frame   0x000006c8       0x20 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_frame   0x000006e8      0x254 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_frame   0x0000093c      0x464 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_frame   0x00000da0      0x17c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_frame   0x00000f1c      0x198 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_frame   0x000010b4      0x130 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_frame   0x000011e4       0x44 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_frame   0x00001228       0xa8 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_frame   0x000012d0       0x40 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_frame   0x00001310      0x18c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_frame   0x0000149c      0x1fc CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_frame   0x00001698       0x64 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_frame   0x000016fc       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_frame   0x00001728       0x2c CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_frame   0x00001754      0x398 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_frame   0x00001aec      0x134 CMakeFiles/pico-MCP23S17.dir/Users/joshreich/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_spi/spi.c.obj
+ .debug_frame   0x00001c20       0x28 /Users/joshreich/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
 
 .debug_line_str
                 0x00000000      0x355

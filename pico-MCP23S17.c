@@ -14,8 +14,8 @@
 
 enum MCP23S17_Register {
     IODIRA = 0x00,
-    IODIRB = 0x01,
-    IPOLA = 0x02,
+    IODIRB,
+    IPOLA,
     IPOLB,
     GPINTENA,
     GPINTENB,
@@ -25,7 +25,7 @@ enum MCP23S17_Register {
     INTCONB,
     IOCON = 0x0A,
     GPPUPA = 0x0C,
-    GPPUPB = 0x0D,
+    GPPUPB,
     INTFA,
     INTFB,
     INTCAPA,
@@ -36,71 +36,84 @@ enum MCP23S17_Register {
     OLATB
 };
 
-void mcp23s17_init(void) {
-    // SPI initialisation. This example will use SPI at 100kHz
+typedef struct MCP23S17_t {
+    spi_inst_t *spi;
+    uint8_t     cs_pin;
+    uint8_t     addr;
+
+    uint8_t     read_opcode;
+    uint8_t     write_opcode;
+} MCP23S17_t;
+
+void mcp23s17_init(MCP23S17_t *xpndr, spi_inst_t *spi, uint8_t addr, uint8_t cs_pin, uint32_t baudrate) {
     gpio_set_function(PIN_MISO, GPIO_FUNC_SPI);
     gpio_set_function(PIN_CS,   GPIO_FUNC_SIO);
     gpio_set_function(PIN_SCK,  GPIO_FUNC_SPI);
     gpio_set_function(PIN_MOSI, GPIO_FUNC_SPI);
 
-    spi_init(SPI_PORT, 100 * 1000);
-    spi_set_format(SPI_PORT, 8, 0, 0, SPI_MSB_FIRST);
+    spi_init(spi, baudrate);
+    spi_set_format(spi, 8, 0, 0, SPI_MSB_FIRST); 
 
-    // Chip select is active-low, so we'll initialise it to a driven-high state
-    gpio_set_dir(PIN_CS, GPIO_OUT);
-    gpio_put(PIN_CS, 0);
+    gpio_set_dir(cs_pin, GPIO_OUT);
+    gpio_put(cs_pin, 1);
+
+    xpndr->spi = spi;
+    xpndr->cs_pin = cs_pin;
+    xpndr->addr = addr;
+
+    xpndr->read_opcode  = 0b01000001 | (addr << 1);
+    xpndr->write_opcode = 0b01000000 | (addr << 1);
 }
 
-void mcp23s17_write(enum MCP23S17_Register register_addr, uint8_t data) {
-    uint8_t spi_message[4];
-    // Assumes address is 000
-    uint8_t device_opcode_write = 0b01000000;
+void mcp23s17_write(MCP23S17_t *xpndr, enum MCP23S17_Register register_addr, uint8_t data) {
+    uint8_t spi_message[3];
 
-    spi_message[0] = device_opcode_write;
+    spi_message[0] = xpndr->write_opcode;
     spi_message[1] = register_addr;
     spi_message[2] = data;
 
-    gpio_put(PIN_CS, 0);
-    while (!spi_is_writable(SPI_PORT));
-    spi_write_blocking(SPI_PORT, spi_message, 3);
-    gpio_put(PIN_CS, 1);
+    gpio_put(xpndr->cs_pin, 0);
+    spi_write_blocking(xpndr->spi, spi_message, 3);
+    gpio_put(xpndr->cs_pin, 1);
 }
 
-uint8_t mcp23s17_read(uint8_t register_addr) {
-    uint8_t spi_message[4];
-    // Assumes address is 000
-    uint8_t device_opcode_write = 0b01000001;
-    uint8_t data;
+uint8_t mcp23s17_read(MCP23S17_t *xpndr, uint8_t register_addr) {
+    uint8_t spi_message[3];
+    uint8_t data_buffer[3];
 
-    spi_message[0] = device_opcode_write;
+    spi_message[0] = xpndr->read_opcode;
     spi_message[1] = register_addr;
+    spi_message[2] = 0x00;
 
-    gpio_put(PIN_CS, 0);
-    while (!spi_is_writable(SPI_PORT));
-    data = spi_write_blocking(SPI_PORT, spi_message, 2);
-    gpio_put(PIN_CS, 1);
+    gpio_put(xpndr->cs_pin, 0);
+    spi_write_read_blocking(xpndr->spi, spi_message, data_buffer, 3);
+    gpio_put(xpndr->cs_pin, 1);
 
-    return(data);
+    return(data_buffer[2]);
 }
 
 int main()
 {
+    MCP23S17_t xpndr;
     uint8_t i = 0;
     uint16_t delay = 150;
 
-    mcp23s17_init();
+    uint8_t data;
 
-    uint8_t device_opcode_read  = 0b01000001; 
+    mcp23s17_init(&xpndr, SPI_PORT, 0b000, PIN_CS, 1e5);
 
-    mcp23s17_write(IODIRA, 0x00);
-    mcp23s17_write(GPIOA, 0xFF);
+    mcp23s17_write(&xpndr, IODIRA, 0x00);
+    mcp23s17_write(&xpndr, GPIOA, 0xFF);
 
+    mcp23s17_write(&xpndr, GPPUPB, 0xFF); // enable weak pullup on B
 
     while (true) {
-        mcp23s17_write(GPIOA, 1 << i);
+        mcp23s17_write(&xpndr, GPIOA, 1 << i);
         sleep_ms(delay);
-        mcp23s17_write(GPIOA, 0x00);
+        mcp23s17_write(&xpndr, GPIOA, 0x00);
         sleep_ms(delay);
+
+        data = mcp23s17_read(&xpndr, GPIOB);
 
         i++;
         if (i >= 8) i = 0;
